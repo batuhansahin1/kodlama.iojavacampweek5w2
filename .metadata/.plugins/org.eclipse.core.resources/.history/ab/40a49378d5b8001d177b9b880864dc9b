@@ -1,0 +1,44 @@
+package kodlama.io.Devs.business.concretes;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import kodlama.io.Devs.business.abstracts.SubTechnologyService;
+import kodlama.io.Devs.business.requests.CreateSubTechnologyRequest;
+import kodlama.io.Devs.business.responses.GetAllSubTechnologyResponse;
+import kodlama.io.Devs.dataAccess.abstracts.SubTechnologyRepository;
+import kodlama.io.Devs.entities.concretes.SubTechnology;
+
+@Service
+public class SubTechnologyManager  implements SubTechnologyService{
+private SubTechnologyRepository technologyRepository;
+
+@Override
+public List<GetAllSubTechnologyResponse> getAll() {
+	List<SubTechnology> technologies;
+	List<GetAllSubTechnologyResponse> responses;
+	GetAllSubTechnologyResponse response;
+	
+	for(SubTechnology technology:technologies) {
+		response.setId(technology.getId());
+		response.setName(technology.getName());
+		
+	}
+	
+	return  ;
+}
+
+@Override
+public void add(CreateSubTechnologyRequest subTechnologyRequest) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void getById(int id) {
+	// TODO Auto-generated method stub
+	technologyRepository.findById(id);
+}
+
+}

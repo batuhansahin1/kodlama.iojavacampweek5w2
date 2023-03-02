@@ -1,0 +1,22 @@
+package kodlama.io.Devs.webApi;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import kodlama.io.Devs.business.abstracts.SubTechnologyService;
+import lombok.AllArgsConstructor;
+
+@RestController
+@AllArgsConstructor
+@RequestMapping("/api/technologies")
+public class Controller {
+
+	
+	@Autowired
+	
+	private SubTechnologyService technologyService;
+	
+	
+	
+}

@@ -1,0 +1,10 @@
+package kodlama.io.Devs.business.concretes;
+
+import org.springframework.stereotype.Service;
+
+import kodlama.io.Devs.business.abstracts.SubTechnologyService;
+
+@Service
+public class SubTechnologyManager  implements SubTechnologyService{
+
+}

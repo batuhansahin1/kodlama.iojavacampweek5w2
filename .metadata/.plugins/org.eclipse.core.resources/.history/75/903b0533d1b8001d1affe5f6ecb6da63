@@ -1,0 +1,11 @@
+package kodlama.io.Devs.dataAccess.abstracts;
+
+import java.util.List;
+
+import kodlama.io.Devs.business.requests.CreateSubTechnologyRequest;
+import kodlama.io.Devs.business.responses.GetAllSubTechnologyResponse;
+
+public interface SubTechnologyRepository {
+	List<GetAllSubTechnologyResponse> getAll();
+	public void add(CreateSubTechnologyRequest subTechnologyRequest);
+}

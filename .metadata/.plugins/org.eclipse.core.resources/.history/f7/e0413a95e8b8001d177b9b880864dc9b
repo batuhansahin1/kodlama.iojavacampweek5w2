@@ -1,0 +1,44 @@
+package kodlama.io.Devs.webApi;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import kodlama.io.Devs.business.abstracts.SubTechnologyService;
+import kodlama.io.Devs.business.requests.CreateSubTechnologyRequest;
+import kodlama.io.Devs.business.responses.GetAllSubTechnologyResponse;
+
+@RestController
+
+@RequestMapping("/api/technologies")
+public class Controller {
+
+	
+	
+	
+		private SubTechnologyService technologyService;
+	@Autowired
+	public Controller(SubTechnologyService technologyService) {
+		this.technologyService = technologyService;
+	}
+	
+	@GetMapping("/getall")
+	List<GetAllSubTechnologyResponse> getAll(){
+		return technologyService.getAll();
+	}
+	
+	
+	@PostMapping("/add")
+	public void add(@RequestBody CreateSubTechnologyRequest createSubTechnology) {
+		
+		technologyService.add(createSubTechnology);
+	}
+
+	
+	
+}
